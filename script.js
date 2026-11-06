@@ -5,7 +5,6 @@ let pass2 = document.getElementById("pass2");
 const input = document.getElementById("input");
 let size;
 
-
 let generatePassword = (size)=>{
     const txt = "QWERTYUIOPASDFGHJKLZXCVBNMzxcvbnmlkjhgfdsaqwertyuiop0123456789*_!@#$&";
     let arr = txt.split("");
@@ -28,9 +27,9 @@ button.addEventListener("click",()=>{
     //     alert("please enter the size of the password")
     //     return;
     // }
-    const p1 = generatePassword(size)
-    const p2 = generatePassword(size)
+    // const p1 = generatePassword(size)
+    // const p2 = generatePassword(size)
+    pass1.textContent=generatePassword(size);
+    pass2.textContent=generatePassword(size);
     passContainer.style.visibility = "visible";
-    pass1.textContent=p1
-    pass2.textContent=p2
-})
+});

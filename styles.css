@@ -1,73 +1,106 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
-body{
+
+body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: rgba(28, 36, 48,0.9788);
+    background-color: rgba(28, 36, 48, 0.9788);
 }
-.container{
-  background-color: #1C2430;
-  color: white;
-  min-width: 420px;
-  padding: 60px 40px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+
+.container {
+    background-color: #1C2430;
+    color: white;
+    min-width: 420px;
+    padding: 60px 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
 
 /* .top-section{
   margin-bottom: 30px;
 } */
-.top-header{
-  margin-bottom: 10px;
-}
-.top-header span{
-  color: #43E07E;
-  display: block;
+.top-header {
+    margin-bottom: 10px;
 }
 
-.btn{
-  border: none;
-  color: white;
-  font-size: 1rem;
-  margin: 40px 0 20px 0;
-  background-color: #12B075;
-  padding: 10px;
-  border-radius: 5px;
+.top-header span {
+    color: #43E07E;
+    display: block;
 }
-hr{
-  border:1px solid rgba(180, 180, 180, 0.486);
+
+#input {
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #232F40;
+    color: white;
+    border: none;
+    outline: none;
+    width: 250px;
+    display: block;
 }
-.password-container{
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  visibility: hidden;
+
+/* for chrome based browsers like chrome, safari etc */
+/* to remove the arrow button in  input type number */
+#input[type="number"]::-webkit-inner-spin-button,
+#input[type="number"]::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
 }
-.password{
-  background-color: #232F40;
-  padding: 5px 15px;
-  font-size: 14px;
+
+/* for other browsers like mozzila, firefox etc */
+#input[type="number"]{
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.btn {
+    border: none;
+    color: white;
+    font-size: 1rem;
+    margin: 40px 0 20px 0;
+    background-color: #12B075;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+hr {
+    border: 1px solid rgba(180, 180, 180, 0.486);
+}
+
+.password-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    visibility: hidden;
+}
+
+.password {
+    background-color: #232F40;
+    padding: 5px 15px;
+    font-size: 14px;
 }
 
 
 @media (max-width: 400px) {
-  .container {
-    min-width: 350px;  /* Slightly more breathing room for standard iPhones*/
-  }
-  .password-container{
-    display: block;
-  }
-  .password{
-    margin: 2.5px 0;
-    max-width: 150px;
-    text-align: center;
-  }
-}
+    .container {
+        min-width: 350px;
+        /* Slightly more breathing room for standard iPhones*/
+    }
 
+    .password-container {
+        display: block;
+    }
+
+    .password {
+        margin: 2.5px 0;
+        max-width: 150px;
+        text-align: center;
+    }
+}
