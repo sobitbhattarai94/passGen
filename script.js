@@ -33,3 +33,21 @@ button.addEventListener("click",()=>{
     pass2.textContent=generatePassword(size);
     passContainer.style.visibility = "visible";
 });
+// console.log(pass1.innerText)
+pass1.addEventListener("click", ()=>{
+    copyToClipboard(pass1.innerText)
+})
+pass2.addEventListener("click", ()=>{
+    copyToClipboard(pass2.innerText)
+})
+// pass1.addEventListener("click", copyToClipboard(pass1.innerText)) // shit this ran immediately
+
+// copy function
+async function copyToClipboard(text) {
+  try {
+    await navigator.clipboard.writeText(text);
+    console.log('text copied to clipboard');
+  } catch (err) {
+    console.error('failed ', err);
+  }
+}
